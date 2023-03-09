@@ -1,53 +1,32 @@
 import http from 'http';
-import path from 'path';
-import fs from 'fs';
-import mime from 'mime-types';
-import { fileURLToPath } from 'url';
-import { dirname } from 'path';
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
-
+import fileFromRequest from './static-files.mjs';
+import fetch from 'node-fetch';
+const git = 'https://github.com/weblette/Node.mjs-Render-Markdown/blob/main';
 
 http.createServer(onRequest).listen(3000);
 
 async function onRequest(req, res) {
-
-  let URI = req.url.replaceAll('*', '');
-  let shortURI = URI.split('?')[0].split('#')[0];
-
-
-  /*respond to ping from uptime robot*/
-  if (URI == '/ping') {
+const hostProxy = req.headers['host'];
+  if (req.url == '/ping') {
     res.statusCode = 200;
     return res.end();
   }
+  
+  let URI = req.url.replaceAll('*', '');
+  let shortURI = URI.split('?')[0].split('#')[0];
 
-  if (shortURI[shortURI.length - 1] == '/') {
-    shortURI = shortURI + 'index.html';
-  }
-
-
-  try {
-    let fileLocation = path.join(__dirname, shortURI);
-    let file = fs.readFileSync(fileLocation, 'utf8');
-    let type = 'text/html';
-    try{
-      type=mime.lookup(fileLocation)||'text/html';
-    }catch(e){
-      type = 'text/html';
-    }
-    
-    res.setHeader('content-type',type);
+  let md = shortURI.split('.');
+  let mdx = md[md.length - 1];
+  if(mdx=='md'){
+    let mdres = await fetch(git+shortURI);
+    let mdtext = await mdres.text();
+    mdtext=mdtext.replace('<head>',
+        `<head modified>
+         <link rel="stylesheet" href="https://`+hostProxy+`/md.css">`);
     res.statusCode = 200;
-    return res.end(file);
-  } catch (e) {
-    console.log(e.message);
-    res.statusCode = 404;
-    return res.end('File not found');
+    return res.end(mdtext);
   }
-
-
+  return fileFromRequest(req, res);
 }
 
 

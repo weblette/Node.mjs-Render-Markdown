@@ -1,0 +1,27 @@
+div.d-flex,
+div#repository-container-header,
+header.Header-old,
+footer
+{
+   display: none !important;
+   visibility: hidden !important;
+   opacity: 0 !important;
+   max-height: 0px !important;
+   height: 0px !important;
+   transform: scale(0,0) !important;
+   position: absolute !important;
+   z-index: -99 !important;
+}
+
+div.container-xl {
+     max-width: unset ; 
+     margin-right: unset; 
+     margin-left: unset; 
+}
+
+div[data-target="readme-toc.content"],
+div#readme
+{
+margin-top:unset !important;
+  border-width:0px !important;
+}
