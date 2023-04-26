@@ -174,5 +174,5 @@ function doSumm(fun,a,b){
   return fun(a,b);
 }
 
-console.log(doSumm(summ,1,2,));
+console.log(doSumm(𝒇(summ),1,2,));
 ```
