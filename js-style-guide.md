@@ -4,6 +4,12 @@
 
 These are personal preference style guides for how I like to write JavaScript. These are not hard and fast rules and can be disregarded for any number of reasons. Primarily these are to improve my own readability ad secondly for speed in execution and speed in development.
 
+## Symbol shorthand quick reference
+
+| Symbol | ASCII Alternative | Description | Example |
+| ----------- | ----------- | ----------- | ----------- |
+| Header      | Title       | Title       | Title       |
+| Paragraph   | Text        | Text        | Title       |
 
 
 Naming Conventions
