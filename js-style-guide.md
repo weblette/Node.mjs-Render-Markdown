@@ -11,6 +11,7 @@ These are personal preference style guides for how I like to write JavaScript. T
 | `Þ` | `p` | Thorn used for single line arrow function used like an assignment operator. | `let lessHeight =Þ=> window.innerHeight - 10;` |
 | `ʩ`   | `fn` | Feng for generic arrow functions. Actually prefer ascii version here. | `fn=>{console.log('function');}` |
 | `Ͱ`   | `H` | Heta for when idgaf about the return value on a single line arrow function | `server.close(Ͱ=>server.listen(3000));` |
+| `ø`   | `o` | Oslash for when I need a function that returns undefined | `ø=>ø` |
 
 Naming Conventions
 
