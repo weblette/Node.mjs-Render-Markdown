@@ -76,7 +76,8 @@ The next is when passing a multi line arrow function as a variable. Usually this
 
 
 
-``` setTimeout(()=>{ 
+``` 
+setTimeout(()=>{ 
 
 
 
@@ -84,7 +85,8 @@ The next is when passing a multi line arrow function as a variable. Usually this
 
 
 
-},1000);```
+},1000);
+```
 
 
 
@@ -92,7 +94,8 @@ Damn does this look ugly to me and it takes exactly the same amount of effort to
 
 
 
-```setTimeout(fn=>{
+```
+setTimeout(fn=>{
 
 
 
@@ -104,7 +107,8 @@ Damn does this look ugly to me and it takes exactly the same amount of effort to
 
 
 
-},1000);```
+},1000);
+```
 
 
 
@@ -116,7 +120,8 @@ Similarly when assigning an arrow function to a variable we can do the same thou
 
 
 
-```let myArrowFunction = fn => {
+```
+let myArrowFunction = fn => {
 
 
 
@@ -124,7 +129,8 @@ Similarly when assigning an arrow function to a variable we can do the same thou
 
 
 
-}```
+}
+```
 
 
 
