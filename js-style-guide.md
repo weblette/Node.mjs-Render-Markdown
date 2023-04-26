@@ -169,7 +169,7 @@ For cases when I need to pass a callback function that immediately resolve and d
 
 I'm still experimenting with this but I'd like to be able to visibly show that a variable is a function when being passed to another function the current setup looks like this.
 
-```
+```javascript
 globalThis.𝒇=ø=>ø;
 
 function summ(a,b){
