@@ -12,6 +12,8 @@ These are personal preference style guides for how I like to write JavaScript. T
 | `ʩ`   | `fn` | Feng for generic arrow functions. Actually prefer ascii version here. | `fn=>{console.log('function');}` |
 | `Ͱ`   | `H` | Heta for when idgaf about the return value on a single line arrow function | `server.close(Ͱ=>server.listen(3000));` |
 | `ø`   | `o` | Oslash for when I need a function that returns undefined | `ø=>ø` |
+| `𝒇`   | `f` | f for when I want to explicitly state that this variable is a function | `doSumm(𝒇(summ),1,2,)` |
+| `Ж`   | `X` | Zhe for enclosing timing functions | `setInterval(Ж=>{console.log('Ж');},1000,Ж);` |
 
 Naming Conventions
 
