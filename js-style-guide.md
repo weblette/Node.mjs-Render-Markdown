@@ -1,4 +1,4 @@
-Pat’s JavaScript Programming Style Guide
+# Pat’s JavaScript Programming Style Guide
 
 
 
@@ -160,3 +160,19 @@ console.log('Ж');
 ```
 
 For cases when I need to pass a callback function that immediately resolve and does nothing I use `ø=>ø`
+
+I'm still experimenting with this but I'd like to be able to visibly show that a variable is a function when being passed to another function the current setup looks like this.
+
+```
+globalThis.𝒇=ø=>ø;
+
+function summ(a,b){
+  return a+b;
+}
+
+function doSumm(fun,a,b){
+  return fun(a,b);
+}
+
+console.log(doSumm(summ,1,2,));
+```
