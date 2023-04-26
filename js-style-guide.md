@@ -8,7 +8,7 @@ These are personal preference style guides for how I like to write JavaScript. T
 
 | Symbol | ASCII Alternative | Description | Example |
 | ----------- | ----------- | ----------- | ----------- |
-| `Þ` | `p` | Thorn used for single line arrow function used like an assignment operator | `let lessHeight =Þ=> window.innerHeight - 10;` |
+| `javascript Þ` | `p` | Thorn used for single line arrow function used like an assignment operator | `let lessHeight =Þ=> window.innerHeight - 10;` |
 | Paragraph   | Text        | Text        | Title       |
 
 
@@ -22,7 +22,7 @@ For cached sub variables or sub functions I use a snake case style appended to t
 
 
 
-```
+```javascript
 
 let encodedMessage = encodeURI(‘a-b-c’);
 
@@ -126,7 +126,7 @@ Similarly when assigning an arrow function to a variable we can do the same thou
 
 
 
-```
+```javascript
 let myArrowFunction = fn => {
 
 
@@ -142,7 +142,7 @@ let myArrowFunction = fn => {
 
 Hooray. If you really want to save space you can use `ʩ` but that is not necessary. If you are passing a callback function that fits on a single line and you absolutely do not care what the return value is the you can use `Ͱ` at the start of it sort of like a `.then` call.
 
-```
+```javascript
 server.close(Ͱ=>server.listen(3000));
 ```
 
@@ -154,7 +154,7 @@ The third case is probably the least common but happen when you have a single li
 
 Now for setTimeout and setInterval I am introducing a specific symbol to represent these time based functions. For these I am going to use `Ж` as it easily stands out and reminds me of an hourglass with sand falling in the middle. It is nice to open and close with.
 
-```
+```javascript
 const Ж='Ж';
 
 setInterval(Ж=>{
