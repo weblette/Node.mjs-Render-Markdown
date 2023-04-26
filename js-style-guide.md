@@ -134,7 +134,7 @@ let myArrowFunction = fn => {
 
 
 
-Hooray.
+Hooray. If you really want to save space you can use `ʩ` but that is not necessary.
 
 
 
