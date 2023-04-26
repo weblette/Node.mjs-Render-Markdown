@@ -116,7 +116,7 @@ Doesn’t that look so much better? It is way easier to see that this is the sta
 
 
 
-Similarly when assigning an arrow function to a variable we can do the same though it is not ac crucial since the variable name is there to provide context.
+Similarly when assigning an arrow function to a variable we can do the same though it is not as crucial since the variable name is there to provide context.
 
 
 
@@ -141,3 +141,16 @@ Hooray.
 
 
 The third case is probably the least common but happen when you have a single like callback function that takes no variables and is not immediately assigned. To me in this case the action that is happening is more like returning a value than calling a function so use `rtrn`. Like `setTimeout(rtrn => window.innerHeight - 10, 1000);`. These are small but effective changes for making code more readable.
+
+Now for setTimeout and setInterval I am introducing a specific symbol to represent these time based functions. For these I am going to use `Ж` as it easily stands out and reminds me of an hourglass with sand falling in the middle. It is nice to open and close with.
+
+```
+setInterval(Ж=>{
+
+console.log('Ж');
+
+},1000,Ж);
+
+```
+
+For cases when I need to pass a callback function that immediately resolve and does nothing I use `ø=>ø`
