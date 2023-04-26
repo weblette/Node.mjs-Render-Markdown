@@ -145,6 +145,8 @@ The third case is probably the least common but happen when you have a single li
 Now for setTimeout and setInterval I am introducing a specific symbol to represent these time based functions. For these I am going to use `Ж` as it easily stands out and reminds me of an hourglass with sand falling in the middle. It is nice to open and close with.
 
 ```
+const Ж='Ж';
+
 setInterval(Ж=>{
 
 console.log('Ж');
