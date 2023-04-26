@@ -8,7 +8,7 @@ These are personal preference style guides for how I like to write JavaScript. T
 
 | Symbol | ASCII Alternative | Description | Example |
 | ----------- | ----------- | ----------- | ----------- |
-| Header      | Title       | Title       | Title       |
+| `Þ` | `p` | Thorn used for single line arrow function used like an assignment operator | `let lessHeight =Þ=> window.innerHeight - 10;` |
 | Paragraph   | Text        | Text        | Title       |
 
 
