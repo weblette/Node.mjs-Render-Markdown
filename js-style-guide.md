@@ -134,7 +134,11 @@ let myArrowFunction = fn => {
 
 
 
-Hooray. If you really want to save space you can use `ʩ` but that is not necessary.
+Hooray. If you really want to save space you can use `ʩ` but that is not necessary. If you are passing a callback function that fits on a single line and you absolutely do not care what the return value is the you can use `Ͱ` at the start of it sort of like a `.then` call.
+
+```
+server.close(Ͱ=>server.listen(3000));
+```
 
 
 
